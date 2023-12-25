@@ -1,7 +1,12 @@
 import Home from "../pages/index.vue";
-import About from "../pages/about.vue";
+import Component from "../pages/component.vue";
+import LayoutDefault from "../layouts/Default.vue";
 
 export const routes = [
-  { path: "/", component: Home, name: "HOME" },
-  { path: "/about", component: About, name: "ABOUT" },
+  {
+    path: "/",
+    component: LayoutDefault,
+    children: [{ path: "", component: Home, name: "HOME" }],
+  },
+  { path: "/component", component: Component, name: "COMPONENT" },
 ];

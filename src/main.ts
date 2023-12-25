@@ -3,12 +3,14 @@ import "./assets/styles/global.scss";
 import App from "./App.vue";
 import router from "./routes";
 import { createPinia } from "pinia";
+import { Icon } from "@iconify/vue";
 
 const pinia = createPinia();
 
 createApp(App)
   .use(router)
   .use(pinia)
+  .component("Icon", Icon)
   .mount("#app")
   .$nextTick(() => {
     // Remove Preload scripts loading
