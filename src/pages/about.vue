@@ -11,6 +11,6 @@ const { doubleCount } = storeToRefs(useCounterStore());
   <router-link :to="{ name: 'ABOUT' }"> About </router-link>
 
   <div class="card">
-    <button type="button" @click="increment">count is {{ doubleCount }}</button>
+    <button class="btn" type="button" @click="increment">count is {{ doubleCount }}</button>
   </div>
 </template>
